@@ -1,0 +1,132 @@
+body{
+    margin: 0px 0px;
+    background-color: #4B4741;
+    color: white;
+}
+
+.header{
+    background: #22211f;
+    text-align: center;
+    font-size: 22px;
+    padding: 6px 0px;
+}
+
+.warnText{
+    color: rgb(252, 136, 136);
+    max-width: fit-content;
+    margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+    font-size: 20px;
+}
+
+.inputBox{
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Align items vertically center */
+    max-width: fit-content;
+    margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iWord:focus{
+  outline: none; /* Remove default outline */
+}
+
+.iWord{
+    width: 300px; /* Width of the input box */
+  padding: 10px; /* Padding inside the input box */
+  margin: 10px 0; /* Margin around the input box */
+  /*border: 2px solid #ccc; /* Border around the input box */
+  /*border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  font-size: 16px; /* Font size of the text inside the input box */
+  transition: border-color 0.3s ease; 
+}
+
+.enterWord{
+    /*padding: 10px 20px; /* Padding inside the button */
+  font-size: 40px; /* Font size of the button text */
+  border: none; /* Border around the button */
+  /*border-radius: 0px; /* Rounded corners */
+  background-color: #dbff98; /* Background color of the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  overflow: hidden;
+  width: 60px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.enterWord:hover{
+    background-color: #d2d382; /* Background color on hover */
+}
+
+.wordMatrixTable{
+    max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letterNull{
+    background-color: #22211f;
+    width: 100px;
+    height: 125px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100px;
+}
+
+.letterBelong{
+    background-color: #ffcd69;
+    width: 100px;
+    height: 125px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100px;
+}
+
+.letterCorrect{
+    background-color: #53d364;
+    width: 100px;
+    height: 125px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100px;
+}
+
+.retryCont{
+  display: flex; /* Enable flexbox */
+    align-items: center; /* Align items vertically center */
+    max-width: fit-content;
+    margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goverText{
+    color: rgb(252, 136, 136);
+    margin-left: 17px;
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.restartBT{
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 35px; /* Font size of the button text */
+  border: none; /* Border around the button */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fcf593; /* Background color of the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  max-width: fit-content;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.restartBT:hover{
+  background-color: #e0e0e0;
+}
