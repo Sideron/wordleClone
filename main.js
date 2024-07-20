@@ -45,7 +45,7 @@ function sendWord(){
             matrixpt++;
             inputWord.value = ""
             updateMatrixTable();
-            if(matrixpt>attempAmount){
+            if(matrixpt>attempAmount && !winned){
                 gameOver()
             }
         }else if(!onlyLetters){

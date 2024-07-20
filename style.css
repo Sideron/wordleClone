@@ -1,6 +1,6 @@
 body{
     margin: 0px 0px;
-    background-color: #4B4741;
+    background-color: #4e4e4e;
     color: white;
 }
 
@@ -48,8 +48,9 @@ body{
     /*padding: 10px 20px; /* Padding inside the button */
   font-size: 40px; /* Font size of the button text */
   border: none; /* Border around the button */
+  /*color:white;
   /*border-radius: 0px; /* Rounded corners */
-  background-color: #dbff98; /* Background color of the button */
+  background-color: #59BAFF; /* Background color of the button */
   cursor: pointer; /* Pointer cursor on hover */
   overflow: hidden;
   width: 60px;
@@ -58,7 +59,8 @@ body{
 }
 
 .enterWord:hover{
-    background-color: #d2d382; /* Background color on hover */
+    background-color: #22211f; /* Background color on hover */
+    color: #59BAFF;
 }
 
 .wordMatrixTable{
@@ -78,23 +80,25 @@ body{
 }
 
 .letterBelong{
-    background-color: #ffcd69;
+    background-color: #F0922D;
     width: 100px;
     height: 125px;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     font-size: 100px;
+    color: #22211f;
 }
 
 .letterCorrect{
-    background-color: #53d364;
+    background-color:#59BAFF;
     width: 100px;
     height: 125px;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     font-size: 100px;
+    color: #22211f;
 }
 
 .retryCont{
@@ -108,9 +112,28 @@ body{
 
 .goverText{
     color: rgb(252, 136, 136);
-    margin-left: 17px;
-    margin-top: 0px;
+    padding: 10px 20px;
+    background-color: #22211f;
     font-size: 30px;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Align items vertically center */
+    max-width: fit-content;
+    margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.winText{
+  color: #59BAFF;
+  padding: 10px 20px;
+  background-color: #22211f;
+  font-size: 30px;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Align items vertically center */
+  max-width: fit-content;
+  margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .restartBT{
@@ -118,15 +141,17 @@ body{
   font-size: 35px; /* Font size of the button text */
   border: none; /* Border around the button */
   border-radius: 4px; /* Rounded corners */
-  background-color: #fcf593; /* Background color of the button */
+  background-color: #F0922D; /* Background color of the button */
   cursor: pointer; /* Pointer cursor on hover */
-  max-width: fit-content;
-  margin-top: auto;
+  display: flex; /* Enable flexbox */
+    align-items: center; /* Align items vertically center */
+    max-width: fit-content;
+    margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   transition: background-color 0.3s ease;
 }
 
 .restartBT:hover{
-  background-color: #e0e0e0;
+  background-color: #bb9b5a;
 }
