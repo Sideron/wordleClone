@@ -1,6 +1,6 @@
 body{
     margin: 0px 0px;
-    background-color: #4e4e4e;
+    background-color: #474747;
     color: white;
 }
 
@@ -50,7 +50,7 @@ body{
   border: none; /* Border around the button */
   /*color:white;
   /*border-radius: 0px; /* Rounded corners */
-  background-color: #59BAFF; /* Background color of the button */
+  background-color: #59ff6f; /* Background color of the button */
   cursor: pointer; /* Pointer cursor on hover */
   overflow: hidden;
   width: 60px;
@@ -60,7 +60,7 @@ body{
 
 .enterWord:hover{
     background-color: #22211f; /* Background color on hover */
-    color: #59BAFF;
+    color: #59ff6f;
 }
 
 .wordMatrixTable{
@@ -80,7 +80,7 @@ body{
 }
 
 .letterBelong{
-    background-color: #F0922D;
+    background-color: #fad354;
     width: 100px;
     height: 125px;
     border-radius: 15px;
@@ -91,7 +91,7 @@ body{
 }
 
 .letterCorrect{
-    background-color:#59BAFF;
+    background-color:#59ff6f;
     width: 100px;
     height: 125px;
     border-radius: 15px;
@@ -124,7 +124,7 @@ body{
 }
 
 .winText{
-  color: #59BAFF;
+  color: #59ff6f;
   padding: 10px 20px;
   background-color: #22211f;
   font-size: 30px;
@@ -141,7 +141,7 @@ margin-right: auto;
   font-size: 35px; /* Font size of the button text */
   border: none; /* Border around the button */
   border-radius: 4px; /* Rounded corners */
-  background-color: #F0922D; /* Background color of the button */
+  background-color: #fad354; /* Background color of the button */
   cursor: pointer; /* Pointer cursor on hover */
   display: flex; /* Enable flexbox */
     align-items: center; /* Align items vertically center */
