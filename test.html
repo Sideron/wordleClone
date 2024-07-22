@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordle Clone Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha">
+
+    <!-- Your code under test -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wordle clone</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div class="header"><h1>WORDLE clone</h1></div>
+      <div class="inputBox">
+          <input type="text" id="iWord" name="iWord" class="iWord" placeholder="Ex: Orange" maxlength="5"><br><br>
+          <button type="button" id="enterWord" class="enterWord"><p style="margin-top: -2px;">></p></button>
+      </div>
+      <div id="warnText"></div>
+      <div id="wordMatrixTable" class="wordMatrixTable"></div>
+        <div id="goverText"></div>
+      <script src="main.js"></script>
+    </html>
+    <!-- End of your code under test -->
+
+    </div>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <script src="https://www.chaijs.com/chai.js" type="text/javascript"></script>
+
+    <script class="mocha-exec">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+      const expect = chai.expect
+
+      mocha.run();
+
+      // scenario A
+      describe('shows warning on invalid words', function () {
+        // runs before every test for scenario A
+        beforeEach(function(done) {
+          requestAnimationFrame(() =>  done())
+
+          // type something nonsense
+          const input = document.querySelector('#iWord')
+          iWord.value = 'foofo'
+
+          // click the button
+          document.querySelector('#enterWord').click()
+        })
+
+        // test 1 for scenario A
+        it ('shows a warning text', function() {
+          const warnText = document.querySelector('#warnText')
+          expect(warnText.innerText).to.equal('It is not a word')
+        })
+
+        // test 2, for scenario B
+        it ('does not show a button in the matrix 1st row', function() {
+          const letterBelong = document.querySelector('#letterBelong')
+          expect(!!letterBelong).to.be.false
+        })
+      })
+
+      // scenario B
+      describe('when the word matches', function () {
+        beforeEach(function() {
+          // type something that matches this time
+          const input = document.querySelector('#iWord')
+          iWord.value = 'ababa'
+
+          // click the button
+          document.querySelector('#enterWord').click()
+        })
+
+        describe('shows the first row', function () {
+          // test 1 for scenario B
+          it ('does not show a warning text', function() {
+            const warnText = document.querySelector('#warnText')
+            console.log(warnText.innerText)
+            expect(warnText.innerText).to.be.empty
+          })
+
+          // test 2, for scenario B
+          it ('shows a button in the matrix 1st row', function() {
+            const letterNull = document.querySelector('.letterNull')
+            console.log(letterNull)
+            expect(letterNull.checkVisibility()).to.be.true
+          })
+
+          // test 3, for scenario B
+          it ('has an "a" in the 1st cell', function() {
+            const letters = Array.from(document.querySelectorAll('.letterBelong'))
+            expect(letters[0].innerText).to.equal('a')
+          })
+
+          // test 4, for scenario B
+          it ('has an "a" in the 2nd cell', function() {
+            const letters = Array.from(document.querySelectorAll('.letterBelong'))
+            expect(letters[1].innerText).to.equal('a')
+          })
+
+          // test 5, for scenario B
+          it ('has an "b" in the 3rd cell', function() {
+            const letters = Array.from(document.quexrySelectorAll('.letterNull'))
+            expect(letters[0].innerText).to.equal('b')
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
